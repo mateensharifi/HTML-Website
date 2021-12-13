@@ -17,11 +17,15 @@ div {
 }
 
 button:focus{
-  background: rgb(6,44,49);
+  background-color: red;
 }
 
 button{
-  background: rgb(45,18,95);
+  background-color: blue;
+}
+
+button{
+  background-color: yellow;
 }
 
 button {
@@ -31,8 +35,5 @@ button {
   text-align: center;
   font-family: "Brush Script MT", "Courier New", monospace;
   font-size: 50px;
-
-}
-
 
 }
