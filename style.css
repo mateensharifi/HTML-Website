@@ -15,3 +15,24 @@ div {
   padding: 50px;
   margin: 20px;
 }
+
+button:focus{
+  background: rgb(6,44,49);
+}
+
+button{
+  background: rgb(45,18,95);
+}
+
+button {
+  width: 200px;
+  height: 200px;
+  color: white;
+  text-align: center;
+  font-family: "Brush Script MT", "Courier New", monospace;
+  font-size: 50px;
+
+}
+
+
+}
