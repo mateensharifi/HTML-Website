@@ -1,7 +1,9 @@
-body {
+<div body>
 background-image: url("https://c.tenor.com/k4TgrD7WDaUAAAAC/the-rock-face.gif");
-color: white;
+</div>
+<div text>
 text-align: center;
 font-family: "Brush Script MT", "Courier New", monospace;
 font-size: 50px;
+</div>
 }
