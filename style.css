@@ -1,9 +1,17 @@
-<div body>
+body {
 background-image: url("https://c.tenor.com/k4TgrD7WDaUAAAAC/the-rock-face.gif");
-</div>
-<div text>
+color: white;
 text-align: center;
 font-family: "Brush Script MT", "Courier New", monospace;
 font-size: 50px;
-</div>
+border: solid;
+}
+a:active {
+  color: blue;
+}
+div {
+  width: 300px;
+  border: 15px violet;
+  padding: 50px;
+  margin: 20px;
 }
