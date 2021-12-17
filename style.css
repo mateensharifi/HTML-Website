@@ -5,35 +5,62 @@ text-align: center;
 font-family: "Brush Script MT", "Courier New", monospace;
 font-size: 50px;
 border: solid;
-}
-a:active {
-  color: blue;
-}
-div {
-  width: 300px;
-  border: 15px violet;
-  padding: 50px;
-  margin: 20px;
+align-items: center;
+display: flex;
+flex-direction: column;
+height: 100vh;
+width: 100%;
 }
 
-button:focus{
+#score {
+    margin-left: 10px;
+}
+
+.scoreKeeper {
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-size: 5rem;
+  width: 100%;
+}
+
+.colors {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+}
+
+.red {
   background-color: red;
 }
 
-button{
+.red.light {
+  background-color: rgb(242, 99, 99);
+}
+
+.blue {
   background-color: blue;
 }
 
-button{
+.blue.light {
+  background-color: rgb(99, 161, 242);
+}
+
+.green {
+  background-color: green;
+}
+
+.green.light {
+  background-color: rgb(128, 247, 104);
+}
+
+.yellow {
   background-color: yellow;
 }
 
-button {
-  width: 200px;
-  height: 200px;
-  color: white;
-  text-align: center;
-  font-family: "Brush Script MT", "Courier New", monospace;
-  font-size: 50px;
-
+.yellow.light {
+  background.color: rgb(247, 240, 104);
 }
