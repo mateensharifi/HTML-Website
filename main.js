@@ -38,3 +38,18 @@ const pickColor = event => {
     ? win()
     : lose()
 }
+
+const addEvents = () => {
+    c1.addEventListener("click", pickColor)
+    c2.addEventListener("click", pickColor)
+    c3.addEventListener("click", pickColor)
+    c4.addEventListener("click", pickColor)
+}
+
+}
+const removeEvents = () => {
+    c1.removeEventListener("click", pickColor)
+    c2.removeEventListener("click", pickColor)
+    c3.removeEventListener("click", pickColor)
+    c4.removeEventListener("click", pickColor)
+}
