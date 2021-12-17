@@ -1,43 +1,22 @@
 <!DOCTYPE html>
 <html>
-<div head>
+<head>
   <link rel = "stylesheet" href = "style.css" >
   Welcome To
-  <audio
-          controls
-          src="/Users/MateenSharifi/Desktop/CreateTest/(public)/Face\ Off\ -\ Dwayne\ Johnson\ \(The\ Rock\)\ Verse.mp3">
-              Your browser does not support the
-              <code>audio</code> element.
-      </audio>
 </div>
   <body>
 <div p> Mateen's Website</div>
-<button class="" id="blueButton">
-  Button 1
-<button class="" id="redButton">
-  Button 2
-<button class="" id="yellowButton">
-  Button 3
-
-</body>
-
-<script src="script.js"></script>
-
-<script>
-  var rock = "Rock";
-  var rock2 = ["Rock", "Rock", "Rock"];
-  var rock3 = 1 + 'rock' + 2;
-  console.log(rock, rock2, rock3);
-
-function myFunc() {
-  console.log('Hello World');
-}
-
-  document.getElementById("greenButton").addEventListneer("click", function();
-    alert('broken');
-    document.getElementById("greenButton").classList.remove('bigborder');
-    document.getElementById("greenButton").classList.remove('smallborder');
-    var d = [1,2,5,3,12,15,65];
-
-</script>
+<div class="score">
+            <span>Score: </span>
+            <span id="score">0</span>
+          </div>
+          <div class="colors">
+            <div class="red" id="c1" data-color="c1"></div>
+            <div class="blue" id="c2" data-color="c2"></div>
+            <div class="green" id="c3" data-color="c3"></div>
+            <div class="yellow" id="c4" data-color="c4"></div>
+            <div class="startButton" id="startButton" onclick="play()">Play</div>
+        </div>
+      </body>
+      <script src="main.js"></script>
 </html>
