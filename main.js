@@ -17,24 +17,24 @@ const c1 = document.getElementById("c1"),
     for (let i = 0; i < level; i++) {
         switch(game[i]) {
             case 0:
-                setTimeout(() => longLightUp(c1), 1000 * i)
+                setTimeout(() => longLight(c1), 1000 * i)
                 break
             case 1:
-                setTimeout(() => longLightUp(c2), 1000 * i)
+                setTimeout(() => longLight(c2), 1000 * i)
                 break
             case 2:
-                setTimeout(() => longLightUp(c3), 1000 * i)
+                setTimeout(() => longLight(c3), 1000 * i)
                 break
             case 3:
-                setTimeout(() => longLightUp(c4), 1000 * i)
+                setTimeout(() => longLight(c4), 1000 * i)
                 break
         }
     }
     setTimeout(() => addEvents(), 1000 * i + 1)
 }
 const pickColor = event => {
-    shortLightUp(event.target);
-    (colorToNumber(event.target.dataset.color) == game[subLevel])
+    shortLight(event.target);
+    (colorNum(event.target.dataset.color) == game[subLevel])
     ? win()
     : lose()
 }
@@ -73,4 +73,29 @@ const lose = () => {
 
 const generateGame = () => {
     game = new Array(maxLevel).fill(0).map(n => Math.floor(Math.random() * 4))
+}
+
+const longLight = color => {
+    color.classList.add("light")
+    setTimeout(() => color.classList.remove("light"), 600)
+}
+const shortLight = color => {
+    color.classList.add("light")
+    setTimeout(() => color.classList.remove("light"), 200)
+}
+
+const colorNum = color => {
+    switch(color) {
+        case "c1":
+            return 0
+            break
+        case "c2":
+            return 1
+            break
+        case "c3":
+            return 2
+            break
+        case "c4":
+            return 3
+    }
 }
