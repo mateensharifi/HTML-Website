@@ -7,6 +7,7 @@ const c1 = document.getElementById("c1"),
       startButton = document.getElementById("startButton"),
       highScore = document.getElementById("HighScore");
 var game, level = 1, subLevel = 0, score = 0
+var highScore = 0
 function start() {
    startButton.classList.add("hidden")
    generateGame()
