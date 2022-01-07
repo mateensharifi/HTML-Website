@@ -2,12 +2,13 @@ const c1 = document.getElementById("c1"),
       c2 = document.getElementById("c2"),
       c3 = document.getElementById("c3"),
       c4 = document.getElementById("c4"),
+      maxLevel = 50;
       scoreKeeper = document.getElementById("score"),
       startButton = document.getElementById("startButton"),
-      highScore = document.getElementById("HighScore"),
-      var game, level = 1, subLevel = 0, score = 0
-      function start(){
-
+      highScore = document.getElementById("HighScore");
+var game, level = 1, subLevel = 0, score = 0
+function start() {
+   startButton.classList.add("hidden")
    generateGame()
    colors()
    addEvents()
