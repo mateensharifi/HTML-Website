@@ -4,9 +4,10 @@ const c1 = document.getElementById("c1"),
       c4 = document.getElementById("c4"),
       scoreKeeper = document.getElementById("score"),
       startButton = document.getElementById("startButton"),
+      highScore = document.getElementById("HighScore"),
       var game, level = 1, subLevel = 0, score = 0
       function start(){
-        playButton.classList.add("hidden")
+
    generateGame()
    colors()
    addEvents()
@@ -32,7 +33,7 @@ const c1 = document.getElementById("c1"),
     }
     setTimeout(() => addEvents(), 1000 * i + 1)
 }
-const pickColor = event => {
+const changeColor = event => {
     shortLight(event.target);
     (colorNum(event.target.dataset.color) == game[subLevel])
     ? win()
@@ -40,18 +41,17 @@ const pickColor = event => {
 }
 
 const addEvents = () => {
-    c1.addEventListener("click", pickColor)
-    c2.addEventListener("click", pickColor)
-    c3.addEventListener("click", pickColor)
-    c4.addEventListener("click", pickColor)
+    c1.addEventListener("click", changeColor)
+    c2.addEventListener("click", changeColor)
+    c3.addEventListener("click", changeColor)
+    c4.addEventListener("click", changeColor)
 }
 
-}
 const removeEvents = () => {
-    c1.removeEventListener("click", pickColor)
-    c2.removeEventListener("click", pickColor)
-    c3.removeEventListener("click", pickColor)
-    c4.removeEventListener("click", pickColor)
+    c1.removeEventListener("click", changeColor)
+    c2.removeEventListener("click", changeColor)
+    c3.removeEventListener("click", changeColor)
+    c4.removeEventListener("click", changeColor)
 }
 
 const win = () => {
@@ -98,4 +98,11 @@ const colorNum = color => {
         case "c4":
             return 3
     }
+
+  function highScore(){
+    if (level > highScore) {
+      highScore = level;
+       localStorage.setItem('highScore', highScore);
+    }
+  }
 }

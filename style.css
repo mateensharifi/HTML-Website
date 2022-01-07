@@ -25,8 +25,6 @@ width: 100%;
 }
 
 .startButton {
-  align-items: center;
-  position: absolute;
   background-color: white;
   color: black;
   cursor: pointer;
@@ -79,35 +77,30 @@ width: 100%;
   background.color: rgb(247, 240, 104);
 }
 
-.hidden {
-    display: none;
-}
-
 @media (min-width: 420px) {
     .colors {
         height: 415px;
         width: 415px;
     }
 }
-@media (min-width: 520px) {
+@media (min-width: 700px) {
     .scoreKeeper {
         font-size: 5rem;
     }
     .colors {
-        height: 515px;
-        width: 515px;
+        height: 700px;
+        width: 700px;
     }
     .startButton {
         font-size: 3rem;
         height: 80px;
-        left: calc(50% - 80px);
-        top: calc(50% - 40px);
+
         width: 160px;
     }
 }
-@media (min-width: 620px) {
+@media (min-width: 700px) {
     .colors {
-        height: 615px;
-        width: 615px;
+        height: 700px;
+        width: 700px;
     }
 }
