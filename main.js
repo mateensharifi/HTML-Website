@@ -4,18 +4,22 @@ let main = {
     blue: document.getElementById("c2"),
     green: document.getElementById("c3"),
     yellow: document.getElementById("c4"),
-    start: document.getElementById("startButton")
-
+    start: document.getElementById("startButton"),
   },
   maxLevel: 10000,
+  high: document.getElementById("high"),
   scoreKeeper : document.getElementById("score"),
   game:[], level:1,
     subLevel : 0,
     score : 0,
-  highScore : 0,
+  highScoreNum : 0,
 
   startAll : function() {
     //console.log("yes");
+    if (window.localStorage.getItem("highScore") != null) {
+    this.high.innerHTML  = window.localStorage.getItem("highScore");
+    this.highScoreNum = window.localStorage.getItem("highScore");
+    }
     this.button.start.classList.add("hidden");
     this.generateGame();
     this.flashPattern();
@@ -66,6 +70,14 @@ let main = {
     this.button.green.removeEventListener("click", this.colorswap)
     this.button.yellow.removeEventListener("click", this.colorswap)
   },
+  highScore: function() {
+    console.log("level "+this.level+" higshcreo "+this.highScoreNum)
+    if (this.score > this.highScoreNum) {
+      this.highScoreNum = this.score;
+      this.high.innerHTML  = this.highScoreNum;
+      window.localStorage.highScore = this.highScoreNum;
+    }
+  },
 
   win:function(){
     this.subLevel++
@@ -77,6 +89,7 @@ let main = {
       this.level++
       this.scoreKeeper.innerHTML = this.score
       setTimeout(() => this.flashPattern(), 1000)
+      this.highScore()
     }
   },
   lose: function(){
@@ -119,11 +132,5 @@ let main = {
     }
 
 
-  },
-  highScore: function() {
-    if (level > highScore) {
-      highScore = level;
-      localStorage.setItem('highScore', highScore);
-    }
   }
 }
